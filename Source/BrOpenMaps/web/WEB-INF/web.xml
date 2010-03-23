@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>BrOpenMaps</display-name>
+  
+	<servlet>
+		<servlet-name>BuscaMobile</servlet-name>
+		<servlet-class>br.com.bropenmaps.logic.BuscaMobile</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>BuscaMobile</servlet-name>
+		<url-pattern>/mobile/busca</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Mapa</servlet-name>
+		<servlet-class>br.com.bropenmaps.logic.Mapa</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Mapa</servlet-name>
+		<url-pattern>/mobile/mapa</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MaisInfo</servlet-name>
+		<servlet-class>br.com.bropenmaps.logic.MaisInfo</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MaisInfo</servlet-name>
+		<url-pattern>/mobile/maisinfo</url-pattern>
+	</servlet-mapping>	
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

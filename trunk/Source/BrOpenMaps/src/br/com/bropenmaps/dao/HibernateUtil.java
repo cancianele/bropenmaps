@@ -1,4 +1,4 @@
-package br.com.bropenmaps.dao;
+Ôªøpackage br.com.bropenmaps.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -13,8 +13,8 @@ import br.com.bropenmaps.model.Termo;
 import br.com.bropenmaps.util.Log;
 
 /**
- * Classe utilit·ria do hibernate. Ela realiza a inicializaÁ„o com o banco e oferece conexıes com o mesmo.
- * @author Rafael Melo Salum
+ * Classe utilit√°ria do hibernate. Ela realiza a inicializa√ß√£o com o banco e oferece conex√µes com o mesmo.
+ * @author Luiz Gustavo Jord√£o Soares
  *
  */
 public class HibernateUtil {
@@ -41,13 +41,13 @@ public class HibernateUtil {
 	private static final ThreadLocal<Session> session = new ThreadLocal<Session>();
 	
 	/**
-	 * ObtÈm a sess„o atual com o banco ou cria uma nova sess„o.
-	 * @return Objeto {@link Session} que representa uma ou mais conexıes com o banco
+	 * Obt√©m a sess√£o atual com o banco ou cria uma nova sess√£o.
+	 * @return Objeto {@link Session} que representa uma ou mais conex√µes com o banco
 	 * @throws HibernateException
 	 */
 	public static Session currentSession() throws HibernateException {
 		Session s = (Session) session.get();
-		// Abre a sess„o se ainda n„o existir alguma aberta
+		// Abre a sess√£o se ainda n√£o existir alguma aberta
 		if (s == null) {
 			s = sessionFactory.openSession();
 			session.set(s);
@@ -56,7 +56,7 @@ public class HibernateUtil {
 	}
 	
 	/**
-	 * Fecha uma sess„o do hibernate
+	 * Fecha uma sess√£o do hibernate
 	 * @throws HibernateException
 	 */
 	public static void closeSession() throws HibernateException {
@@ -68,8 +68,8 @@ public class HibernateUtil {
 	}
 	
 	/**
-	 * Retorna a f·brica de sessıes do hibernate.
-	 * @return F·brica de sessıes
+	 * Retorna a f√°brica de sess√µes do hibernate.
+	 * @return F√°brica de sess√µes
 	 */
 	public static SessionFactory getSessionFactory() {
 		return sessionFactory;

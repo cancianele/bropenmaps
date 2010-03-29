@@ -1,4 +1,4 @@
-package br.com.bropenmaps.dao;
+Ôªøpackage br.com.bropenmaps.dao;
 
 import java.util.HashMap;
 
@@ -7,7 +7,7 @@ import br.com.bropenmaps.util.Log;
 
 /**
  * F√°brica de objetos do tipo DAO
- * @author Rafael Melo Salum
+ * @author Luiz Gustavo Jord√£o Soares
  *
  */
 public class DAOFactory {
@@ -27,7 +27,7 @@ public class DAOFactory {
 	}
 	
 	/**
-	 * Retorna um inst‚ncia de objeto de acesso a dados
+	 * Retorna um inst√¢ncia de objeto de acesso a dados
 	 * @param nome - nome class de acesso
 	 * @return Um objeto que encapsula o acesso a base de dados {@link DAO}
 	 */
@@ -37,7 +37,7 @@ public class DAOFactory {
 		
 		if(nome==null) { return null; }
 		
-		final String nomeCompleto = pacoteDAO + "." + nome;
+		final String nomeCompleto = pacoteDAO+"."+nome;
 		
 		if(factoryLog.getLogger().isDebugEnabled()) { factoryLog.gravaLog("Buscando o objeto da classe "+nomeCompleto+" no pool de DAOs..."); }
 		
@@ -45,7 +45,7 @@ public class DAOFactory {
 		
 		if(dao==null) {
 		
-			if(factoryLog.isDebugEnabled()) { factoryLog.gravaLog("Objeto da classe "+nomeCompleto+" n„o encontrado..."); }
+			if(factoryLog.isDebugEnabled()) { factoryLog.gravaLog("Objeto da classe "+nomeCompleto+" n√£o encontrado..."); }
 			
 			try {
 			
@@ -59,15 +59,15 @@ public class DAOFactory {
 				
 			} catch (InstantiationException e) {
 				
-				factoryLog.gravaErro("ImpossÌvel instanciar "+nomeCompleto, e);
+				factoryLog.gravaErro("Imposs√≠vel instanciar "+nomeCompleto, e);
 				
 			} catch (IllegalAccessException e) {
 				
-				factoryLog.gravaErro("Acesso inv·lido a "+nomeCompleto, e);
+				factoryLog.gravaErro("Acesso inv√°lido a "+nomeCompleto, e);
 				
 			} catch (ClassNotFoundException e) {
 				
-				factoryLog.gravaErro(nomeCompleto+" n„o existe!", e);
+				factoryLog.gravaErro(nomeCompleto+" n√£o existe!", e);
 				
 			}
 			

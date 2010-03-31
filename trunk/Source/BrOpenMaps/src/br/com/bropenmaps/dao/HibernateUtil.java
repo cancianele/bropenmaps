@@ -1,4 +1,4 @@
-﻿package br.com.bropenmaps.dao;
+package br.com.bropenmaps.dao;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -14,7 +14,7 @@ import br.com.bropenmaps.util.Log;
 
 /**
  * Classe utilitária do hibernate. Ela realiza a inicialização com o banco e oferece conexões com o mesmo.
- * @author Luiz Gustavo Jordão Soares
+ * @author Rafael Melo Salum
  *
  */
 public class HibernateUtil {

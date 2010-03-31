@@ -1,4 +1,4 @@
-﻿package br.com.bropenmaps.dao;
+package br.com.bropenmaps.dao;
 
 import java.lang.reflect.Field;
 import java.util.Collection;
@@ -11,7 +11,7 @@ import br.com.bropenmaps.util.Log;
 
 /**
  * Classe genérica de acesso a base de dados
- * @author Luiz Gustavo Jordão Soares
+ * @author Rafael Melo Salum
  *
  * @param <T> - entidade relacionada aos acessos
  */

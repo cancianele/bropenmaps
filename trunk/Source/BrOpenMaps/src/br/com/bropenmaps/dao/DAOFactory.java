@@ -1,4 +1,4 @@
-﻿package br.com.bropenmaps.dao;
+package br.com.bropenmaps.dao;
 
 import java.util.HashMap;
 
@@ -7,7 +7,7 @@ import br.com.bropenmaps.util.Log;
 
 /**
  * Fábrica de objetos do tipo DAO
- * @author Luiz Gustavo Jordão Soares
+ * @author Rafael Melo Salum
  *
  */
 public class DAOFactory {

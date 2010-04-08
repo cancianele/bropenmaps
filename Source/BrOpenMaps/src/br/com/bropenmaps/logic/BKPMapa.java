@@ -17,15 +17,15 @@ import br.com.bropenmaps.util.BOMapsCacheManager;
 import br.com.zymboo.commons.util.CriptUtils;
 
 /**
- * Renderiza um quadrante do mapa (9 partes). A requisiÃ§Ã£o deve conter um parÃ¢metro chamado x (coordenada da imagem), y (coordenada da imagem) e back (url de retorno), alÃ©m de lat(latitude) e lng(longitude). 
- * @author Rafael Melo Salum
+ * Renderiza um quadrante do mapa (9 partes). A requisição deve conter um parâmetro chamado x (coordenada da imagem), y (coordenada da imagem) e back (url de retorno), alÃ©m de lat(latitude) e lng(longitude). 
+ * @author Daniel Melo
  *
  */
 @SuppressWarnings("serial")
 public class BKPMapa extends HttpServlet {
 	
 	/**
-	 * RequisiÃ§Ã£o via get, que Ã© redirecionada via post
+	 * Requisição via get, que é redirecionada via post
 	 */
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -158,11 +158,11 @@ public class BKPMapa extends HttpServlet {
 	}
 	
 	/**
-	 * Monta as aÃ§Ãµes das setas de navegaÃ§Ã£o do mapa
+	 * Monta as ações das setas de navegação do mapa
 	 * @param x - coordenada do quadrante
 	 * @param y - coordenada do quadrante
-	 * @param zoom - nÃ­vel de zoom
-	 * @return Array contendo as imagens da seta e suas respectivas aÃ§Ãµes
+	 * @param zoom - nível de zoom
+	 * @return Array contendo as imagens da seta e suas respectivas ações
 	 */
 	private String[][] montaNavegacaoMapas(Integer x, Integer y, int zoom) {		
 		

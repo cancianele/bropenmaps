@@ -1,7 +1,7 @@
 package br.com.bropenmaps.util;
 
 /**
- * Classe que contÃ©m as operaÃ§Ãµes relacionadas aos quadrantes de imagens da API do Google para mapas 
+ * Classe que contém as operações relacionadas aos quadrantes de imagens da API do Google para mapas 
  * @author Rafael Melo Salum
  *
  */
@@ -102,7 +102,7 @@ public class Tile {
     }
     
     /**
-     * Retorna a string usada como parÃ¢metro para a representaÃ§Ã£o de mapas via satÃ©lite
+     * Retorna a string usada como parâmetro para a representação de mapas via satélite
      * @return
      */
     private String getKeyholeString() {

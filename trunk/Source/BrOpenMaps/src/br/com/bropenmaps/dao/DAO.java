@@ -10,8 +10,8 @@ import br.com.bropenmaps.dao.interfaces.IDAO;
 import br.com.bropenmaps.util.Log;
 
 /**
- * Classe genÃ©rica de acesso a base de dados
- * @author Rafael Melo Salum
+ * Classe genérica de acesso a base de dados
+ * @author Daniel Melo
  *
  * @param <T> - entidade relacionada aos acessos
  */
@@ -50,8 +50,8 @@ public abstract class DAO<T> implements IDAO<T> {
 	}
 	
 	/**
-	 * Insere uma entidade genÃ©rica no banco. Este mÃ©todo realiza o commit no banco apÃ³s o seu tÃ©rmino.
-	 * @param bean - objeto genÃ©rico da entidade
+	 * Insere uma entidade genérica no banco. Este método realiza o commit no banco após o seu término.
+	 * @param bean - objeto genérico da entidade
 	 */
 	public void inserir(final T bean) {
 		if(logger.isDebugEnabled()) {logger.gravaLog("Inserindo "+bean);}
@@ -62,8 +62,8 @@ public abstract class DAO<T> implements IDAO<T> {
 	}
 	
 	/**
-	 * Insere uma entidade genÃ©rica no banco. Este mÃ©todo nÃ£o realiza o commit no banco apÃ³s o seu tÃ©rmino.
-	 * @param bean - objeto genÃ©rico da entidade
+	 * Insere uma entidade genérica no banco. Este método nÃ£o realiza o commit no banco após o seu término.
+	 * @param bean - objeto genérico da entidade
 	 */
 	public void inserirTx(final T bean) {
 		if(logger.isDebugEnabled()) {logger.gravaLog("Inserindo "+bean);}
@@ -72,8 +72,8 @@ public abstract class DAO<T> implements IDAO<T> {
 	}
 	
 	/**
-	 * Atualiza uma entidade genÃ©rica no banco. Este mÃ©todo realiza o commit no banco apÃ³s o seu tÃ©rmino.
-	 * @param bean - objeto genÃ©rico da entidade
+	 * Atualiza uma entidade genérica no banco. Este método realiza o commit no banco após o seu término.
+	 * @param bean - objeto genérico da entidade
 	 */
 	public void atualizar(final T bean) {
 		if(logger.isDebugEnabled()) {logger.gravaLog("Atualizando "+bean);}
@@ -84,8 +84,8 @@ public abstract class DAO<T> implements IDAO<T> {
 	}
 	
 	/**
-	 * Atualiza uma entidade genÃ©rica no banco. Este mÃ©todo nÃ£o realiza o commit no banco apÃ³s o seu tÃ©rmino.
-	 * @param bean - objeto genÃ©rico da entidade
+	 * Atualiza uma entidade genérica no banco. Este método nÃ£o realiza o commit no banco após o seu término.
+	 * @param bean - objeto genérico da entidade
 	 */
 	public void atualizarTx(final T bean) {
 		if(logger.isDebugEnabled()) {logger.gravaLog("Atualizando "+bean);}

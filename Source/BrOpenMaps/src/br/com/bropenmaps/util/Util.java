@@ -23,29 +23,29 @@ import br.com.bropenmaps.model.CidadesDist;
 import br.com.zymboo.commons.util.CriptUtils;
 
 /**
- * Classe utilitÃ¡ria do sistema
+ * Classe utilitária do sistema
  * @author Rafael Melo Salum
  *
  */
 public class Util {
 	
 	/**
-	 * Constante que representa o mÃ¡ximo de resultado aceito por pÃ¡gina
+	 * Constante que representa o máximo de resultado aceito por página
 	 */
 	public static final int MAX_RESULTADOS = 10;
 	
 	/**
-	 * Quantidade de pÃ¡ginas a serem mostradas antes e depois da pÃ¡gina atual
+	 * Quantidade de páginas a serem mostradas antes e depois da página atual
 	 */
 	final public static int PAG_ANT_DEP = 3;
 	
 	/**
-	 * Tipo de validaÃ§Ã£o para campo obrigatÃ³rio
+	 * Tipo de validação para campo obrigatório
 	 */
 	final public static int OBRIGATORIO = 1;
 	
 	/**
-	 * Tipo de validaÃ§Ã£o para email
+	 * Tipo de validação para email
 	 */
 	final public static int EMAIL = 2;
 	
@@ -57,10 +57,10 @@ public class Util {
 	 *
 	 * unescape: http://www.w3.org/International/unescape.java
 	 *
-	 * Copyright Ã‚Â© 1997 World Wide Web Consortium, (Massachusetts
+	 * Copyright Â© 1997 World Wide Web Consortium, (Massachusetts
 	 * Institute of Technology, European Research Consortium for
 	 * Informatics and Mathematics, Keio University). All Rights Reserved. 
-	 * This work is distributed under the W3CÃ‚Â® Software License [1] in the
+	 * This work is distributed under the W3CÂ® Software License [1] in the
 	 * hope that it will be useful, but WITHOUT ANY WARRANTY; without even
 	 * the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 	 * PURPOSE.
@@ -69,10 +69,10 @@ public class Util {
 	 */
 	  
 	 /**
-	  * Desfaz as alteraÃ§Ãµes feitas quando um termo precisa ser modificado ao ser utilizado como parÃ¢metro em requisiÃ§Ãµes HTTP (decoder para o {@link URLEncoder}).
-	  * Este mÃ©todo transforma '+' em espaÃ§o.
+	  * Desfaz as alterações feitas quando um termo precisa ser modificado ao ser utilizado como parâmetro em requisições HTTP (decoder para o {@link URLEncoder}).
+	  * Este método transforma '+' em espaço.
 	  * @param s - termo a ser modificado 
-	  * @return Retorna o termo com as modificaÃ§Ãµes realizadas
+	  * @return Retorna o termo com as modificações realizadas
 	  */
 	  public static String unescape(String s) {
 		if(s==null) { return s; }
@@ -129,9 +129,9 @@ public class Util {
 	  }
 	  
 	 /**
-	  * Desfaz as alteraÃ§Ãµes feitas quando um termo precisa ser modificado ao ser utilizado como parÃ¢metro em requisiÃ§Ãµes HTTP (decoder para o {@link URLEncoder})
+	  * Desfaz as alterações feitas quando um termo precisa ser modificado ao ser utilizado como parâmetro em requisições HTTP (decoder para o {@link URLEncoder})
 	  * @param s - termo a ser modificado 
-	  * @return Retorna o termo com as modificaÃ§Ãµes realizadas
+	  * @return Retorna o termo com as modificações realizadas
 	  */
 	  public static String decoder(String s) {
 			if(s==null) { return s; }
@@ -185,9 +185,9 @@ public class Util {
 		  }	  
 	  
 	  /**
-	   * Cria uma expressÃ£o regular para busca da palavra com ou sem acentuaÃ§Ã£o
+	   * Cria uma expressão regular para busca da palavra com ou sem acentuação
 	   * @param texto - texto a ser transformado
-	   * @return regexp - expressÃ£o regular
+	   * @return regexp - expressão regular
 	   */
 	  public static String regExpPalavrasAcentuadas(String texto){
 			String retorno = "";
@@ -202,58 +202,56 @@ public class Util {
 	                    break;
 	                }
 					case 'a':
-					case 'Ã¡':
-					case 'Ã ':
-					case 'Ã¤':
-					case 'Ã£':
-					case 'Ã¢':
+					case 'á':
+					case 'à':
+					case 'ä':
+					case 'ã':
+					case 'â':
 	                {
-	                	retorno += "(a|Ã¡|Ã |Ã£|Ã¢|Ã¤)";
+	                	retorno += "(a|á|à|ã|â|ä)";
 	                    break;
 	                }
 					case 'e':
-					case 'Ã©':
-	                case 'Ã¨':
-	                case 'Ã«':
-	                case 'Ãª':
+					case 'é':
+	                case 'è':
+	                case 'ë':
+	                case 'ê':
 	                {
-	                    retorno += "(e|Ã©|Ã¨|Ã«|Ãª)";
+	                    retorno += "(e|é|è|ë|ê)";
 	                    break;
 	                }
+	                case 'í':
+	                case 'ì':
+	                case 'ï':
 	                case 'i':
-	                case 'Ã­':
-	                case 'Ã¬':
-	                case 'Ã¯':
-	                case 'Ä©':
-	                case 'Ã®':
+	                case 'î':
 	                {
-	                    retorno += "(i|Ã­|Ã¬|Ã¯|Ã®|Ä©)";
+	                    retorno += "(i|í|ì|ï|î|i)";
 	                    break;
 	                }
-	                case 'Ã³':
-	                case 'Ã²':
-	                case 'Ã¶':
-	                case 'Ãµ':
-	                case 'Ã´':
+	                case 'ó':
+	                case 'ò':
+	                case 'ö':
+	                case 'õ':
+	                case 'ô':
 	                case 'o':	
 	                {
-	                    retorno += "(o|Ã³|Ã²|Ãµ|Ã¶|Ã´)";
+	                    retorno += "(o|ó|ò|õ|ö|ô)";
 	                    break;
 	                }
+	                case 'ú':
+	                case 'ù':
+	                case 'ü':
+	                case 'û':
 	                case 'u':
-	                case 'Ãº':
-	                case 'Ã¹':
-	                case 'Ã¼':
-	                case 'Ã»':
-	                case 'Å©':
 	                {
-	                    retorno += "(u|Ãº|Ã¹|Å©|Ã¼|Ã»)";
+	                    retorno += "(u|ú|ù|u|ü|û)";
 	                    break;
 	                }
 	                case 'c':
-	                case 'Ã§':
+	                case 'ç':
 	                {
-	                    retorno += "(c|Ã§)";
+	                    retorno += "(c|ç)";
 	                    break;
 	                }
 	                default :
@@ -266,12 +264,12 @@ public class Util {
 		}
 	  
 	  /**
-	   * Calcula a distÃ¢ncia entre dois pontos que representa latitude e longitude
+	   * Calcula a distância entre dois pontos que representa latitude e longitude
 	   * @param x - latitude do primeiro ponto
 	   * @param x0 - latitude do segundo ponto
 	   * @param y - longitude do primeiro ponto
 	   * @param y0 - longitude do segundo ponto
-	   * @return DistÃ¢ncia entre eles
+	   * @return Distância entre eles
 	   */
 	  public static double calcDistanciaDoisPontos(double x, double x0, double y, double y0) {
 			
@@ -280,7 +278,7 @@ public class Util {
 	  }
 	
 	  /**
-	   * Retorna um lista de objetos {@link CidadesDist} mais prÃ³ximas a um determinado ponto, ordenadas decrescentemente pela proximidade ao ponto.
+	   * Retorna um lista de objetos {@link CidadesDist} mais próximas a um determinado ponto, ordenadas decrescentemente pela proximidade ao ponto.
 	   * @param pLat - latitude a ser comparada
 	   * @param pLng - longitude a ser comparada
 	   * @return Lista de objetos {@link CidadesDist}
@@ -352,10 +350,10 @@ public class Util {
 	}
 
 	/**
-	 *  Verifica se duas strings sÃ£o iguais independentemente da caixa e dos acentos
+	 *  Verifica se duas strings são iguais independentemente da caixa e dos acentos
 	 * @param p1
 	 * @param p2
-	 * @return true se sÃ£o iguais, false em caso contrÃ¡rio
+	 * @return true se são iguais, false em caso contrário
 	 */
 	public static  boolean verificaIgualdadeCaseInsensitiveSemAcento(String p1, String p2) {
 		
@@ -384,9 +382,9 @@ public class Util {
 	}
 	
 	/**
-	 * Retira espaÃ§os em branco do inÃ­cio e do final de uma sequÃªncia de caracteres. AlÃ©m disso remove os caracteres &nbsp; (espaÃ§o) das sequÃªncia. 
+	 * Retira espaços em branco do início e do final de uma sequência de caracteres. Além disso remove os caracteres &nbsp; (espaço) das sequência. 
 	 * @param str
-	 * @return SequÃªncia de caracteres sem os espaÃ§os.
+	 * @return Sequência de caracteres sem os espaços.
 	 */
 	public static String trim(String str) {
 		
@@ -403,13 +401,13 @@ public class Util {
 	}
 	
 	/**
-	 * Cria uma porÃ§Ã£o HTML contendo a paginaÃ§Ã£o de determinada busca.
+	 * Cria uma porção HTML contendo a paginação de determinada busca.
 	 * @param total - total de itens.
 	 * @param inicio - item inicial
-	 * @param metodoJs - mÃ©todo em Javascript para a alteraÃ§Ã£o de pÃ¡ginas
+	 * @param metodoJs - método em Javascript para a alteração de páginas
 	 * @param parametro - indica o tipo da busca
 	 * @param acaoComp - filtro da busca
-	 * @return CÃ³digo HTML contendo a paginaÃ§Ã£o
+	 * @return Código HTML contendo a paginação
 	 */
 	public static StringBuilder criaPaginacao(StringBuilder total, int inicio, String metodoJs, String parametro, String acaoComp) {
 		
@@ -456,14 +454,14 @@ public class Util {
 						paginas.append(i==inicio ? "<div class=\"left left2px paginacao_item\">"+i+"</div>" : "<div class=\"left left2px\"><a class=\"paginacao\" href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+i+","+acaoComp+")\">"+i+"</a></div>");
 					}
 				}
-				//PrÃ³xima
+				//Próxima
 				if(inicio<pag) {
-					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+(inicio+1)+","+acaoComp+")\"><img src=\"imagens/bt_proximo.png\" class=\"noborder\" alt=\"PrÃ³ximo\" title=\"PrÃ³ximo\"/></a></div>");
+					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+(inicio+1)+","+acaoComp+")\"><img src=\"imagens/bt_proximo.png\" class=\"noborder\" alt=\"Próximo\" title=\"Próximo\"/></a></div>");
 				}
 				
-				//Ãšltima
+				//Última
 				if(inicio<pag) {
-					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+pag+","+acaoComp+")\"><img src=\"imagens/bt_ultimo.png\" class=\"noborder\" alt=\"Ãšltimo\" title=\"Ãšltimo\"/></a></div>");
+					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+pag+","+acaoComp+")\"><img src=\"imagens/bt_ultimo.png\" class=\"noborder\" alt=\"Último\" title=\"Último\"/></a></div>");
 				}					
 			}
 			else {
@@ -487,14 +485,14 @@ public class Util {
 						paginas.append(i==inicio ? "<div class=\"left left2px paginacao_item\">"+i+"</div>" : "<div class=\"left left2px\"><a class=\"paginacao\" href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+i+","+acaoComp+")\">"+i+"</a></div>");
 					}
 				}
-				//PrÃ³xima
+				//Próxima
 				if(inicio<pag) {
-					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+(inicio+1)+","+acaoComp+")\"><img src=\"imagens/bt_proximo.png\" class=\"noborder\" alt=\"PrÃ³ximo\" title=\"PrÃ³ximo\"/></a></div>");				
+					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+(inicio+1)+","+acaoComp+")\"><img src=\"imagens/bt_proximo.png\" class=\"noborder\" alt=\"Próximo\" title=\"Próximo\"/></a></div>");				
 				}
 				
-				//Ãšltima
+				//Última
 				if(inicio<pag) {
-					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+pag+","+acaoComp+")\"><img src=\"imagens/bt_ultimo.png\" class=\"noborder\" alt=\"Ãšltimo\" title=\"Ãšltimo\"/></a></div>");
+					paginas.append("<div class=\"left left2px\"><a href=\"javascript:"+metodoJs+"("+(parametro!=null ? "'"+parametro+"', " : "")+pag+","+acaoComp+")\"><img src=\"imagens/bt_ultimo.png\" class=\"noborder\" alt=\"Último\" title=\"Último\"/></a></div>");
 				}
 			}
 			paginas.append("</div>");
@@ -505,11 +503,11 @@ public class Util {
 	}
 	
 	/**
-	 * Cria uma porÃ§Ã£o HTML contendo a paginaÃ§Ã£o de determinada busca para aparelhos mÃ³veis
+	 * Cria uma porção HTML contendo a paginação de determinada busca para aparelhos móveis
 	 * @param total - total de itens.
 	 * @param inicio - item inicial
 	 * @param acaoComp - filtro da busca
-	 * @return CÃ³digo HTML contendo a paginaÃ§Ã£o
+	 * @return Código HTML contendo a paginação
 	 */
 	public static StringBuilder criaPaginacaoMobile(StringBuilder total, int inicio, String acaoComp) {
 		
@@ -556,12 +554,12 @@ public class Util {
 						paginas.append(i==inicio ? "<div class=\"left left2px paginacao_item\">"+i+"</div>" : "<div class=\"left left2px\"><a class=\"paginacao nodecoration\" href=\""+acaoComp+"&inicio="+i+"\">"+i+"</a></div>");
 					}
 				}
-				//PrÃ³xima
+				//Próxima
 				if(inicio<pag) {
 					paginas.append("<div class=\"left left5px\"><a class=\"paginacao nodecoration\" href=\""+acaoComp+"&inicio="+(inicio+1)+"\">&gt;</a></div>");
 				}
 				
-				//Ãšltima
+				//Última
 				if(inicio<pag) {
 					paginas.append("<div class=\"left left5px\"><a class=\"paginacao nodecoration\" href=\""+acaoComp+"&inicio="+pag+"\">&gt;&gt;</a></div>");
 				}					
@@ -587,12 +585,12 @@ public class Util {
 						paginas.append(i==inicio ? "<div class=\"left left2px paginacao_item\">"+i+"</div>" : "<div class=\"left left2px\"><a class=\"paginacao nodecoration\" href=\""+acaoComp+"&inicio="+i+"\">"+i+"</a></div>");
 					}
 				}
-				//PrÃ³xima
+				//Próxima
 				if(inicio<pag) {
 					paginas.append("<div class=\"left left5px\"><a class=\"paginacao nodecoration\" href=\""+acaoComp+"&inicio="+(inicio+1)+"\">&gt;</a></div>");				
 				}
 				
-				//Ãšltima
+				//Última
 				if(inicio<pag) {
 					paginas.append("<div class=\"left left5px\"><a class=\"paginacao nodecoration\" href=\""+acaoComp+"&inicio="+pag+"\">&gt;&gt;</a></div>");
 				}
@@ -605,100 +603,100 @@ public class Util {
 	}
 	
 	/**
-	 * Retira a acentuaÃ§Ã£o de uma determina sequÃªncia de caracteres
+	 * Retira a acentuação de uma determina sequência de caracteres
 	 * @param texto
-	 * @return O parÃ¢metro <i>texto</i> sem acentuaÃ§Ã£o
+	 * @return O parâmetro <i>texto</i> sem acentuação
 	 */
 	public static String retiraAcento(String texto){
 		String retorno = "";
 		for (int ln = 0; ln < texto.length(); ln++){
 			switch (texto.charAt(ln)){
-				case 'Ã¡':
-				case 'Ã ':
-				case 'Ã¤':
-				case 'Ã£':
-				case 'Ã¢':
+				case 'á':
+				case 'à':
+				case 'ä':
+				case 'ã':
+				case 'â':
                 {
                 	retorno += "a";
                     break;
                 }
-				case 'Ã':
-				case 'Ã€':
-				case 'Ã„':
-				case 'Ãƒ':
-				case 'Ã‚':
+				case 'Á':
+				case 'À':
+				case 'Ä':
+				case 'Ã':
+				case 'Â':
                 {
                 	retorno += "A";
                     break;
                 }
-                case 'Ã©':
-                case 'Ã¨':
-                case 'Ã«':
-                case 'Ãª':
+                case 'é':
+                case 'è':
+                case 'ë':
+                case 'ê':
                 {
                     retorno += "e";
                     break;
                 }
-                case 'Ã‰':
-                case 'Ãˆ':
-                case 'Ã‹':
-                case 'ÃŠ':
+                case 'É':
+                case 'È':
+                case 'Ë':
+                case 'Ê':
                 {
                     retorno += "E";
                     break;
                 }
-                case 'Ã­':
-                case 'Ã¬':
-                case 'Ã¯':
+                case 'í':
+                case 'ì':
+                case 'ï':
                 {
                     retorno += "i";
                     break;
                 }
-                case 'Ã':
-                case 'ÃŒ':
-                case 'Ã':
+                case 'Í':
+                case 'Ì':
+                case 'Ï':
                 {
                     retorno += "I";
                     break;
                 }
-                case 'Ã³':
-                case 'Ã²':
-                case 'Ã¶':
-                case 'Ãµ':
-                case 'Ã´':
+                case 'ó':
+                case 'ò':
+                case 'ö':
+                case 'õ':
+                case 'ô':
                 {
                     retorno += "o";
                     break;
                 }
-                case 'Ã“':
-                case 'Ã’':
-                case 'Ã•':
-                case 'Ã”':
-                case 'Ã–':
+                case 'Ó':
+                case 'Ò':
+                case 'Õ':
+                case 'Ô':
+                case 'Ö':
                 {
                     retorno += "O";
                     break;
                 }
-                case 'Ãº':
-                case 'Ã¹':
-                case 'Ã¼':
+                case 'ú':
+                case 'ù':
+                case 'ü':
                 {
                     retorno += "u";
                     break;
                 }
-                case 'Ãš':
-                case 'Ã™':
-                case 'Ãœ':
+                case 'Ú':
+                case 'Ù':
+                case 'Ü':
                 {
                     retorno += "U";
                     break;
                 }
-                case 'Ã§':
+                case 'ç':
                 {
                     retorno += "c";
                     break;
                 }
-                case 'Ã‡':
+                case 'Ç':
                 {
                     retorno += "C";
                     break;
@@ -713,9 +711,9 @@ public class Util {
 	}
 	
 	/**
-	 * Encripta e codifica(codificaÃ§Ã£o para URL) uma sequÃªncia de caracteres
-	 * @param p - sequÃªncia de caracteres a ser alterada
-	 * @return ParÃ¢metro alterado
+	 * Encripta e codifica(codificação para URL) uma sequência de caracteres
+	 * @param p - sequência de caracteres a ser alterada
+	 * @return Parâmetro alterado
 	 */
 	public static String criptografa(String p) {
 		
@@ -734,9 +732,9 @@ public class Util {
 	}
 	
 	/**
-	 * Decripta e decodifica(codificaÃ§Ã£o para URL) uma sequÃªncia de caracteres
-	 * @param c - sequÃªncia de caracteres a ser alterada
-	 * @return ParÃ¢metro alterado
+	 * Decripta e decodifica(codificação para URL) uma sequência de caracteres
+	 * @param c - sequência de caracteres a ser alterada
+	 * @return Parâmetro alterado
 	 */
 	public static String decriptografa(String c) {
 		
@@ -755,9 +753,9 @@ public class Util {
 	}
 	
 	/**
-	 * Extrai os parÃ¢metros de uma requisiÃ§Ã£o HTTP
+	 * Extrai os parâmetros de uma requisição HTTP
 	 * @param query - query string
-	 * @return Objeto {@link HashMap} contendo os parÃ¢metros
+	 * @return Objeto {@link HashMap} contendo os parâmetros
 	 */
 	public static HashMap<String, String> extraiParametros(String query) {
 		
@@ -778,9 +776,9 @@ public class Util {
 	}
 	
 	/**
-	 * Extrai os parÃ¢metros de uma requisiÃ§Ã£o HTTP. A string da requisiÃ§Ã£o, neste caso, estÃ¡ criptografada.
+	 * Extrai os parâmetros de uma requisição HTTP. A string da requisição, neste caso, está criptografada.
 	 * @param query - query string
-	 * @return Objeto {@link HashMap} contendo os parÃ¢metros
+	 * @return Objeto {@link HashMap} contendo os parâmetros
 	 */
 	public static HashMap<String, String> extraiParametrosCript(String query) {
 		
@@ -818,7 +816,7 @@ public class Util {
             try {
                     md = MessageDigest.getInstance("MD5");
             } catch (NoSuchAlgorithmException e) {
-                    logger.gravaErro("NÃ£o foi possÃ­vel inicializar algoritmo MD5, gerando chave a partir da hora atual em milisegundos",e);
+                    logger.gravaErro("Não foi possível inicializar algoritmo MD5, gerando chave a partir da hora atual em milisegundos",e);
                     return String.valueOf((new Date()).getTime());
             }
             if (chave == null) {
@@ -882,9 +880,9 @@ public class Util {
 	}
 	
 	/**
-	 * Valida um endereÃ§o de email
-	 * @param email - endereÃ§o a ser validado
-	 * @return O valor true se o email Ã© vÃ¡lido, false em caso contrÃ¡rio
+	 * Valida um endereço de email
+	 * @param email - endereço a ser validado
+	 * @return O valor true se o email é válido, false em caso contrário
 	 */
 	public static boolean validaEmail(String email) {
 		
@@ -902,11 +900,11 @@ public class Util {
 	}
 	
 	/**
-	 * Valida um formulÃ¡rio. Dois parÃ¢metros sÃ£o passados. O primeiro Ã© um estrutura que representa os campos do formulÃ¡rio, esta estrutura Ã© formada por
-	 * uma coleÃ§Ã£o de pares nome do campo/valor do campo. O segundo parÃ¢mtetro Ã© tambÃ©m uma coleÃ§Ã£o formada por pares nome do campo/tipo de validaÃ§Ã£o.
-	 * @param params - parÃ¢metros do formulÃ¡rio a serem validados
-	 * @param tipo - tipo de validaÃ§Ã£o para cada parÃªmetro
-	 * @return Estrutura contendo os erros encontrados, que uma coleÃ§Ã£o de pares nome do campo/erro encontrado.
+	 * Valida um formulário. Dois parâmetros são passados. O primeiro é um estrutura que representa os campos do formulário, esta estrutura é formada por
+	 * uma coleção de pares nome do campo/valor do campo. O segundo parâmtetro é também uma coleção formada por pares nome do campo/tipo de validação.
+	 * @param params - parâmetros do formulário a serem validados
+	 * @param tipo - tipo de validação para cada parêmetro
+	 * @return Estrutura contendo os erros encontrados, que uma coleção de pares nome do campo/erro encontrado.
 	 */
 	public static HashMap<String, String> validaForm(final HashMap<String, String> params, final HashMap<String, Integer[]> tipo) {
 		
@@ -928,7 +926,7 @@ public class Util {
 					
 					if(params.get(s)==null || params.get(s).equals("")) {
 						
-						erros.put(s, "Campo obrigatÃ³rio.");
+						erros.put(s, "Campo obrigatório.");
 						
 					}
 					
@@ -944,7 +942,7 @@ public class Util {
 							
 							if(!validaEmail(StringUtils.trim(tk[i]))) {
 								
-								erros.put(s, "Informe email(s) vÃ¡lido(s).");
+								erros.put(s, "Informe email(s) válido(s).");
 								
 								break;
 								
@@ -965,9 +963,9 @@ public class Util {
 	}
 	
 	/**
-	 * Retira do telefone todos caracteres que nÃ£o sejam nÃºmeros
+	 * Retira do telefone todos caracteres que não sejam números
 	 * @param tel - telefone que se deseja remover os caracteres indesejados
-	 * @return Somente os nÃºmeros do telefone
+	 * @return Somente os números do telefone
 	 */
 	public static String limpaTelefones(String tel) {
 		
@@ -1000,7 +998,7 @@ public class Util {
 	}
 	
 	/**
-	 * Corta o texto no espaÃ§o mais prÃ³ximo do limite e acrescenta retecencias.
+	 * Corta o texto no espaço mais próximo do limite e acrescenta retecencias.
 	 * 
 	 * @param texto
 	 * @param limite

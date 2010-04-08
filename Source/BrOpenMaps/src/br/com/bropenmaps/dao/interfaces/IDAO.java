@@ -2,7 +2,7 @@ package br.com.bropenmaps.dao.interfaces;
 
 /**
  * Interface que representa uma classe que encapsula operações de acesso a banco
- * @author Rafael Melo Salum
+ * @author Daniel Melo
  *
  * @param <T> - entidade relacionada aos acessos
  */

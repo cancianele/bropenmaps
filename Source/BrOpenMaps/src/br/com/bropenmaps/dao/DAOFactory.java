@@ -6,8 +6,8 @@ import br.com.bropenmaps.dao.interfaces.IDAO;
 import br.com.bropenmaps.util.Log;
 
 /**
- * F√°brica de objetos do tipo DAO
- * @author Rafael Melo Salum
+ * F·brica de objetos do tipo DAO
+ * @author Daniel Melo
  *
  */
 public class DAOFactory {
@@ -59,15 +59,15 @@ public class DAOFactory {
 				
 			} catch (InstantiationException e) {
 				
-				factoryLog.gravaErro("Imposs√≠vel instanciar "+nomeCompleto, e);
+				factoryLog.gravaErro("ImpossÌvel instanciar "+nomeCompleto, e);
 				
 			} catch (IllegalAccessException e) {
 				
-				factoryLog.gravaErro("Acesso inv√°lido a "+nomeCompleto, e);
+				factoryLog.gravaErro("Acesso inv·lido a "+nomeCompleto, e);
 				
 			} catch (ClassNotFoundException e) {
 				
-				factoryLog.gravaErro(nomeCompleto+" n√£o existe!", e);
+				factoryLog.gravaErro(nomeCompleto+" n„o existe!", e);
 				
 			}
 			

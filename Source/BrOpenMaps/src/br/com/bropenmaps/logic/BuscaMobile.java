@@ -20,8 +20,8 @@ import br.com.bropenmaps.util.Util;
 import br.com.bropenmaps.util.BOMapsCacheManager;
 
 /**
- * Servelt respons√°vel em receber e responder a requisi√ß√£o de uma nova busca para aparelhos m√≥veis.
- * A requisi√ß√£o deve conter os par√¢metros q (tipo de estabelecimento), cidade e estado(sigla do estado)
+ * Servelt respons·vel em receber e responder a requisiÁ„o de uma nova busca para aparelhos mÛveis.
+ * A requisiÁ„o deve conter os par‚metros q (tipo de estabelecimento), cidade e estado(sigla do estado)
  * @author Rafael Melo Salum
  *
  */
@@ -29,7 +29,7 @@ import br.com.bropenmaps.util.BOMapsCacheManager;
 public class BuscaMobile extends HttpServlet {
 	
 	/**
-	 * Requisi√ß√£o via get, que √© redirecionada via post
+	 * RequisiÁ„o via get, que È redirecionada via post
 	 */
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +40,7 @@ public class BuscaMobile extends HttpServlet {
 	}
 	
 	/**
-	 * Requisi√ß√£o via post. Requisita uma busca a camada de dados e renderiza a resposta ao usu√°rio
+	 * RequisiÁ„o via post. Requisita uma busca a camada de dados e renderiza a resposta ao usu·rio
 	 */
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -185,7 +185,7 @@ public class BuscaMobile extends HttpServlet {
 						
 						String b = Util.criptografa("busca?q="+q+"&cidade="+cidade+"&estado="+estado+"&cc="+chaveCache+"&inicio="+inicio);
 						
-						resultado.append("<br/><a href=\"maisinfo?estId="+est.getEstabelecimentoId()+"&back="+b+"\">Mais Informa√ß√µes</a>");
+						resultado.append("<br/><a href=\"maisinfo?estId="+est.getEstabelecimentoId()+"&back="+b+"\">Mais InformaÁıes</a>");
 						
 					}
 					
